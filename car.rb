@@ -1,23 +1,22 @@
 class Car
 	Miles_per_galon = 20
 
-	attr_reader :fulel
+	attr_reader :fuel
 
 	def initialize
-		@fulel = 0
+		@fuel = 0
 	end
 
 	def add_fuel amount
 		@fuel += amount
 	end
 
-
 	def range
-		0
+		@fuel * Miles_per_galon
 	end
 
 end
 
-car = Car.new 
-car.add_fuel 10
-puts "range is #{car.range}"
+# car = Car.new 
+# car.add_fuel 10
+# puts "range is #{car.range}"
